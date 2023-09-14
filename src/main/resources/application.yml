@@ -1,0 +1,70 @@
+server:
+  port: 8888
+spring:
+
+  application:
+    name: gaswell
+    #数据库的配置
+  datasource:
+    dynamic:
+      primary: mysql #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+        # 主数据库
+        mysql:
+#          url: jdbc:mysql://127.0.0.1:3306/gaswell?characterEncoding=utf-8&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+          url: jdbc:mysql://180.201.149.107:3306/gaswell?characterEncoding=utf-8&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+          username: root
+#          password: Database@616
+          password: 123456
+          driver-class-name: com.mysql.cj.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+
+
+
+
+        # Oracle数据库
+        oracle:
+#          url: jdbc:oracle:thin:@180.201.149.107:1521:ORCL
+          url: jdbc:oracle:thin:@127.0.0.1:1521:ORCL
+          username: HSY
+          password: cyyhsy.123
+#          username: YS
+#          password: 123456
+          driver-class-name: oracle.jdbc.driver.OracleDriver
+
+
+#          实时数据数据库
+        rtu:
+#          url: jdbc:mysql://127.0.0.1:3306/rtu?characterEncoding=utf-8&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+          url: jdbc:mysql://180.201.149.107:3306/rtu?characterEncoding=utf-8&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+          username: root
+#          password: Database@616
+          password: 123456
+          driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+
+
+  #redis配置
+
+  redis:
+    host: localhost
+    port: 6379
+  servlet:
+    multipart:
+      #一次上传文件的最大总量
+      max-request-size: 50MB
+      #单个文件的最大值
+      max-file-size: 50MB
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl  #不打印日志
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #打印日志
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      id-type: auto
+
+
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gaswell.mapper.UserMapper">
+<!--    <resultMap id="userResult" type="com.gaswell.pojo.User">-->
+<!--        <id column="user_id" property="user_id"/>-->
+<!--        <result column="user_name"  property="user_name"/>-->
+<!--        <result column="user_realname" property="user_realname"/>-->
+<!--        <result column="user_password"  property="user_password"/>-->
+<!--        <result column="user_remarks"  property="user_remarks"/>-->
+<!--        <association property="user_role" column="user_role_id" javaType="com.gaswell.pojo.Role">-->
+<!--            <id property="role_id" column="role_id"/>-->
+<!--            <result property="role_type" column="role_type"/>-->
+<!--            <result property="role_name" column="role_name"/>-->
+<!--            <result property="role_remarks" column="role_remarks"/>-->
+<!--        </association>-->
+<!--        <association property="user_department" column="user_department_id" javaType="com.gaswell.pojo.Department">-->
+<!--            <id property="department_id" column="department_id"/>-->
+<!--            <result property="department_type" column="department_type"/>-->
+<!--            <result property="department_name" column="department_name"/>-->
+<!--            <result property="department_remarks" column="department_remarks"/>-->
+<!--        </association>-->
+<!--    </resultMap>-->
+
+<!--    <insert id="insert" parameterType="com.gaswell.pojo.User" >-->
+<!--        insert into `user`(user_name,user_realname,user_password,user_role,user_department,user_remarks)-->
+<!--         values (#{user_name},#{user_realname},#{user_password},#{user_role.role_id},#{user_department.department_id},#{user_remarks})-->
+<!--    </insert>-->
+
+<!--    <select id="selectOne"  resultMap="userResult" parameterType="com.gaswell.pojo.User">-->
+<!--        select * from `user`-->
+<!--        <where>-->
+<!--            <if test="user_id != null and user_id !=0"> user_id=#{user_id}</if>-->
+<!--            <if test="user_name != null and user_name !=''"> and user_name=#{user_name}</if>-->
+<!--            <if test="user_realname != null and user_realname !=''"> and user_realname=#{user_realname}</if>-->
+<!--            <if test="user_password != null and user_password !=''"> and user_password=#{user_password}</if>-->
+<!--            <if test="user_remarks != null and user_remarks !=''"> and user_remarks=#{user_remarks}</if>-->
+<!--        </where>-->
+<!--        limit 1-->
+<!--    </select>-->
+
+<!--    <select id="selectMany"  resultMap="userResult" parameterType="com.gaswell.pojo.User">-->
+<!--        select * from `user`-->
+<!--        <where>-->
+<!--            <if test="user_id != null and user_id !=0"> user_id=#{user_id}</if>-->
+<!--            <if test="user_name != null and user_name !=''"> and user_name=#{user_name}</if>-->
+<!--            <if test="user_realname != null and user_realname !=''"> and user_realname=#{user_realname}</if>-->
+<!--            <if test="user_password != null and user_password !=''"> and user_password=#{user_password}</if>-->
+<!--            <if test="user_remarks != null and user_remarks !=''"> and user_remarks=#{user_remarks}</if>-->
+<!--        </where>-->
+<!--    </select>-->
+
+<!--    <select id="selectAll"  resultMap="userResult" >-->
+<!--        select * from `user`-->
+<!--    </select>-->
+
+<!--    <update id="update" parameterType="com.gaswell.pojo.User">-->
+<!--        update `user`-->
+<!--        <set>-->
+<!--            <if test="user_name != null and user_name !=''">user_name=#{user_name},</if>-->
+<!--            <if test="user_realname != null and user_realname !=''">user_realname=#{user_realname},</if>-->
+<!--            <if test="user_password != null and user_password !=''">user_password=#{user_password},</if>-->
+<!--            <if test="user_role.role_id != null and user_role.role_id !=0">user_role_id=#{user_role.role_id},</if>-->
+<!--            <if test="user_department.department_id != null and user_department.department_id !=0">user_department_id=#{user_department.department_id},</if>-->
+<!--            <if test="user_remarks != user_remarks and user_remarks !=''">user_remarks=#{user_remarks},</if>-->
+<!--        </set>-->
+<!--        where user_id = #{user_id}-->
+<!--    </update>-->
+
+<!--    <delete id="delete" parameterType="com.gaswell.pojo.User">-->
+<!--        delete from `user`-->
+<!--        <where>-->
+<!--            <if test="user_id != null and user_id !=0"> user_id=#{user_id}</if>-->
+<!--            <if test="user_name != null and user_name !=''"> and user_name=#{user_name}</if>-->
+<!--            <if test="user_realname != null and user_realname !=''"> and user_realname=#{user_realname}</if>-->
+<!--            <if test="user_password != null and user_password !=''"> and user_password=#{user_password}</if>-->
+<!--            <if test="user_remarks != null and user_remarks !=''"> and user_remarks=#{user_remarks}</if>-->
+<!--        </where>-->
+<!--    </delete>-->
+
+</mapper>
